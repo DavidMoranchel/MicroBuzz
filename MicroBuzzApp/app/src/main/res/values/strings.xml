@@ -9,4 +9,9 @@
     <string name="log_in">Inicio Sesión</string>
     <string name="login_user">Usuario</string>
     <string name="login_conductor">Conductor</string>
+    <string name="unidad">La unidad es...</string>
+    <string name="comentario_usuario">Deja un comentario</string>
+    <string name="tiempo_servicio">Tiempo de recorrido</string>
+    <string name="calificacion_usuario">Tu calificación</string>
+    <string name="enviar_calificacion_usuario">Enviar Calificación</string>
 </resources>

@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.9/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
-
+from django.core.urlresolvers import reverse_lazy
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
      #Social-login
     'social.apps.django_app.default',
+    #app informacion
+    'login',
+
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -133,12 +136,25 @@ AUTHENTICATION_BACKENDS = (
 'social.backends.facebook.FacebookOAuth2',
 # Django
 'django.contrib.auth.backends.ModelBackend',
+#email
+'social.backends.email.EmailAuth',
 )
 
 
+# Users login 
 SOCIAL_AUTH_FACEBOOK_KEY = '1764644930433326'
 SOCIAL_AUTH_FACEBOOK_SECRET = '1fdb1526e6221d53237de146a3618cd5'
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"
+
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+  
+  'fields': 'email'
+}
+
+#Choferes login
+LOGIN_URL = reverse_lazy('login')
+LOGIN_REDIRECT_URL = reverse_lazy('login')
+LOGOUT_URL = ('logout')
 
 
 
@@ -147,7 +163,6 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 STATICFILES_DIRS=(os.path.join(BASE_DIR,"static"),)
 
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")

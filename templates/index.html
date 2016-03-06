@@ -12,7 +12,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-  
+
     <nav>
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">MicroBuzz</a>
@@ -85,6 +85,30 @@
 	<script src="{% static 'js/app.js' %}" type="text/javascript"></script>
   <script src="{% static "assets/materialize.js" %}"></script>
   <script src="{% static "assets/script.js" %}"></script>
+
+
+  <p>{{object.img}}</p>
+  <p>{{object.usr}}</p>
+  <p>{{object.nombre}}</p>
+
+
+  <form action="" method="post">{% csrf_token %}
+      <p>Confirma que quieres eliminar :  "{{ object }}"?</p>
+      <input type="submit" value="Eliminar" />
+  </form>
+  
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="Guardar">
+  </form>
+
+
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="Actualizar">
+  </form>
 
 
 

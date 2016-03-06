@@ -16,10 +16,10 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ToolBarTheme" />
+            app:theme="@style/AppTheme" />
 
         <FrameLayout
-            android:id="@+id/contaiter"
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="start"/>

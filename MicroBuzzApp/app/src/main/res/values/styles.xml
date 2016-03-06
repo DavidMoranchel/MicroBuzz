@@ -11,9 +11,7 @@
         <item name="android:icon">@color/icons</item>
         <item name="android:textColorPrimary">@color/primary_text</item>
         <!-- Customize your theme here. -->
-        <!--
-        <color name="primary_light">#F8BBD0</color>
-        -->
+
     </style>
 
 </resources>

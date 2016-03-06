@@ -7,6 +7,11 @@
             android:checked="true"
             android:icon="@drawable/icon_explorar"
             android:title="@string/action_explore" />
+        <item
+            android:id="@+id/action_alert"
+            android:checked="true"
+            android:title="@string/action_alert"
+            />
         <!--
         <item
             android:id="@+id/action_people"

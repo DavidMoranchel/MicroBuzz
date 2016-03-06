@@ -5,22 +5,38 @@
    <title>Chofer</title>
 	 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	 <link href='https://fonts.googleapis.com/css?family=Roboto:400,100italic,900' rel='stylesheet' type='text/css'>
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+	 <link rel="stylesheet" href="/static/assets/materialize.min.css">
 
  </head>
  <body>
+	 <nav>
+     <div class="nav-wrapper">
+       <a href="#!" class="brand-logo">MicroBuzz</a>
+       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+       <ul class="right hide-on-med-and-down">
+         <!-- <li><a href="#singup" class='modal-trigger'>Sing Up</a></li>
+         <li><a href="#singin" class='modal-trigger'>Sing In</a></li> -->
+       </ul>
+       <ul class="side-nav" id="mobile-demo">
+         <li><a href="sass.html">Sass</a></li>
+         <li><a href="badges.html">Components</a></li>
+         <li><a href="collapsible.html">Javascript</a></li>
+         <li><a href="mobile.html">Mobile</a></li>
+       </ul>
+     </div>
+   </nav>
     {% block chofer %}
   <div class="container">
 		<div class="row">
 	    <form method="POST" class="col s12">
-				<div class="row">
-					<div class="input-field col s6 m6">
+				<div class="row ">
+					<div class="input-field col s6 m6 offset-s3 offset-m3 card">
 	      {% csrf_token %}
 	      {{form.as_p}}
 	      <input type="submit" value="ok" >
 				</div>
 	    </form>
-	    <!-- <ul>
+	    <ul>
 
 	      {% if form.error %}
 	        {% for error in form.errors %}
@@ -28,7 +44,7 @@
 	        {% endfor %}
 	      {% endif %}
 
-	    </ul> -->
+	    </ul>
 
 	  </div>
   </div>

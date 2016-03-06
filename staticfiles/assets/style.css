@@ -1,0 +1,22 @@
+.loginfb{
+	border-radius: 5px;
+	background:#3F51B5;
+	color: white;
+	padding: 2%;
+}
+.img{
+	width: 100%;
+	height: 90%;
+	background-size: cover;
+	background: url('http://images.lagazzettadf.com/2014/06/micro-camion-transporte.jpg') no-repeat;
+}
+
+.margen{
+	margin-top: 30px;
+}
+.btn-fb{
+	margin-left: 35%;
+}
+.btn a{
+	z-index: 9999;
+}

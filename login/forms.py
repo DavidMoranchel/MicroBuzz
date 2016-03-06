@@ -35,3 +35,6 @@ class ChoferForm(forms.ModelForm):
 				),
 
 		}
+
+
+

@@ -29,4 +29,6 @@ urlpatterns = [
 	url(r'^users/logout/$','django.contrib.auth.views.logout',{'next_page': '/'},name="user-logout"),
     url(r'^chofer/$', viewsChofer.base, name="chofer"),
 
+    url(r'^filtro/$',TemplateView.as_view(template_name="usuario.html"), name="usuario"),
+
 ]

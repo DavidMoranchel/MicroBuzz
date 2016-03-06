@@ -84,30 +84,6 @@
   <script src="{% static "assets/script.js" %}"></script>
 
 
-  <p>{{object.img}}</p>
-  <p>{{object.usr}}</p>
-  <p>{{object.nombre}}</p>
-
-
-  <form action="" method="post">{% csrf_token %}
-      <p>Confirma que quieres eliminar :  "{{ object }}"?</p>
-      <input type="submit" value="Eliminar" />
-  </form>
-  
-    <form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p}}
-    <input type="submit" value="Guardar">
-  </form>
-
-
-    <form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p}}
-    <input type="submit" value="Actualizar">
-  </form>
-
-
 
 </body>
 </html>

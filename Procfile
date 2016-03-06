@@ -1,0 +1,1 @@
+web: gunicorn MicroBuzz.wsgi --log-file -

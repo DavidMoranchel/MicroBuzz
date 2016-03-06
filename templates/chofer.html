@@ -1,4 +1,33 @@
-<div class="container">
-		<div>
-			<img src="http://images.lagazzettadf.com/2014/06/micro-camion-transporte.jpg" alt="" class='circle responsive-img'>
-</div>
+
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+ </head>
+ <body>
+    {% block chofer %} 
+  <div>
+    <form method="POST">
+      {% csrf_token %}  
+      {{form.as_p}}
+      <input type="submit" value="ok">
+    </form>
+    <ul>
+    
+      {% if form.error %}
+        {% for error in form.errors %}
+          <li>Tienes un error en {{error}}</li>
+        {% endfor %}
+      {% endif %} 
+
+    </ul>
+
+  </div>
+  
+{% endblock chofer %}
+ </body>
+ </html> 
+
+
+

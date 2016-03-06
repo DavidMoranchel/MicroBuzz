@@ -10,21 +10,6 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-	
-
-	<main ng-view></main>
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-resource.min.js"></script>
-  <script src="/app/app.js"></script>
-  <script src="/app/routes/routes.js"></script>
-  <script src="/app/home/ctrl_home.js"></script>
-  <script src="/app/factory/factory.js"></script>
-  <script src='/assets/materialize.js'></script>
-  <script src='/assets/script.js'></script>
 
 
 
@@ -36,6 +21,31 @@ Welcome back {{ user.get_full_name }}.
  Enter with Facebook
  </a>
  {% endif %}
+
+  <p>{{object.img}}</p>
+  <p>{{object.usr}}</p>
+  <p>{{object.nombre}}</p>
+
+
+  <form action="" method="post">{% csrf_token %}
+      <p>Confirma que quieres eliminar :  "{{ object }}"?</p>
+      <input type="submit" value="Eliminar" />
+  </form>
+  
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="Guardar">
+  </form>
+
+
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="Actualizar">
+  </form>
+
+
 
 </body>
 </html>

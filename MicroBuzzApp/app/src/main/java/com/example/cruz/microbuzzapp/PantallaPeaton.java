@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 public class PantallaPeaton extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
+        //super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_peaton,menu);
     }
 }

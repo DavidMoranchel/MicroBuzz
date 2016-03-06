@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         // Dependiendo de la seleccion de usuario Conductor
         // o usuario peaton remplazamos el fragment.
         replaceFragment( new PantallaPeaton() );
-        replaceFragment( new PantallaConductor());
+        //replaceFragment( new PantallaConductor());
     }
 
     @Override
@@ -38,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
 
         return super.onOptionsItemSelected(item);
     }

@@ -2,7 +2,15 @@
   'use strict';
   angular.module("microbuzz",['ngResource'])
   .factory("apiMapaton",apiMapaton)
+  .config(configuration)
   .directive("mapaBuzz",mapaBuzz);
+
+  configuration.$inject = ["$interpolateProvider"];
+ function configuration($interpolateProvider){
+   $interpolateProvider.startSymbol('{$');
+   $interpolateProvider.endSymbol('$}');
+ }
+
 
   apiMapaton.$inject = ["$resource"];
   function apiMapaton($resource){

@@ -23,13 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url('', include('social.apps.django_app.urls', namespace='social')),
     # Home URL
-<<<<<<< HEAD
-	
-    
-=======
-	url(r'^$', TemplateView.as_view(template_name="index.html"), name="index"),
-    url(r'^chofer$', TemplateView.as_view(template_name="chofer.html"), name="chofer"),
->>>>>>> 40dea6eef5faa9e5bf06daf84ea21a9e9ec48dae
+
 	# Logout URL
 	url(r'^users/logout/$','django.contrib.auth.views.logout',{'next_page': '/'},name="user-logout"),
     url(r'^chofer/$', viewsChofer.base, name="chofer"),

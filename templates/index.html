@@ -3,10 +3,36 @@
 
 {% block content %}
 
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="http://www.arpem.com/furgonetas/citroen/jumpy/imagenes-08/citroen-jumpy-combi-dimensiones-1.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Evalue el Servicio</h3>
+          <h5 class="light grey-text text-lighten-3">Es fácil y rápido</h5>
+        </div>
+      </li>
+      <li>
+        <img src="http://newsoaxaca.com/fotos/septiembre/29_septiembre/3081261.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Chofer!</h3>
+          <h5 class="light grey-text text-lighten-3">Ingresa, Se evaluado y Gana recompensas</h5>
+        </div>
+      </li>
+      <li>
+        <img src="http://image.posta.com.mx/sites/default/files/transporte-d-f-trolebc3bas2.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Mejoremos el transporte en la ciudad</h3>
+          <h5 class="light grey-text text-lighten-3"></h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
     <div id="singup" class="modal">
       <div class="modal-content">
         <h4>Sing Up</h4>
-        <p class='center-align'>
+        <p>
           <form action="" method='POST'>
 
           </form>
@@ -14,7 +40,7 @@
           <h1>Welcome back {{ user.get_full_name }}. </h1>
            <a href="{% url 'user-logout' %}">Logout</a>
            {% else %}
-           <a class='loginfb' href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
+           <a class='loginfb btn-fb' href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
            Enter with Facebook
            </a>
           {% endif %}
@@ -27,7 +53,7 @@
 
     <div id="singin" class="modal">
       <div class="modal-content">
-        <h4>Sing Up</h4>
+        <h4>Sing In</h4>
         <p class='center-align'>
           {% if user and not user.is_anonymous %}
           <h1>Welcome back {{ user.get_full_name }}. </h1>
@@ -46,7 +72,6 @@
 
 
 {% endblock %}
-
 
 </body>
 </html>

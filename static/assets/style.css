@@ -10,10 +10,7 @@
 	background-size: cover;
 	background: url('http://images.lagazzettadf.com/2014/06/micro-camion-transporte.jpg') no-repeat;
 }
-.input-field label{
-	position: relative;
-	margin-left: 20%;
-}
-.input-field {
-margin-left: 20%;
+
+.btn-fb{
+	margin-left: 35%;
 }

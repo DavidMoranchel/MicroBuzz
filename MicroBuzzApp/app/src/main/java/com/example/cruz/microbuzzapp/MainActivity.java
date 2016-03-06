@@ -38,11 +38,9 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_log_out) {
             return true;
         }
-
-
         return super.onOptionsItemSelected(item);
     }
     public void replaceFragment(Fragment fragment){

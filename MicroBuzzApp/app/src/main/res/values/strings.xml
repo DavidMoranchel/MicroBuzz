@@ -6,4 +6,5 @@
     <string name="action_explore">Explora tu ruta</string>
     <string name="action_alert">Alerta</string>
     <string name="action_log_out">Cerrar Sesión</string>
+    <string name="log_in">Inicio Sesión</string>
 </resources>

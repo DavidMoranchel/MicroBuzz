@@ -13,7 +13,10 @@
 
 .margen{
 	margin-top: 30px;
-
+}
 .btn-fb{
 	margin-left: 35%;
+}
+.btn a{
+	z-index: 9999;
 }

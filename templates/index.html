@@ -2,6 +2,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="boton center-align">
+<a href="{% url 'chofer' %}"class="waves-effect waves-light btn"><i class="material-icons right">assignment_ind</i>Chofer</a>
+<a href="{% url 'usuario' %}"class="waves-effect waves-light btn"><i class="material-icons right">assignment_ind</i>Usuario</a>
+</div>
 
 <div class="slider">
     <ul class="slides">
@@ -29,10 +33,11 @@
     </ul>
   </div>
 
+
     <div id="singup" class="modal">
       <div class="modal-content">
         <h4>Sing Up</h4>
-        <p>
+        <p class="center-align">
           <form action="" method='POST'>
 
           </form>
@@ -40,7 +45,7 @@
           <h1>Welcome back {{ user.get_full_name }}. </h1>
            <a href="{% url 'user-logout' %}">Logout</a>
            {% else %}
-           <a class='loginfb btn-fb' href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
+           <a class='loginfb' href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
            Enter with Facebook
            </a>
           {% endif %}
@@ -70,4 +75,3 @@
 
 </body>
 </html>
->>>>>>> 1b388f6f0d3ca06d4f3593d86a6a58eb361e4363

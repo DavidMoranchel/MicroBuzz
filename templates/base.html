@@ -17,8 +17,12 @@
       <a href="#!" class="brand-logo">MicroBuzz</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#singup" class='modal-trigger'>Sing Up</a></li>
+				  {% if user and not user.is_anonymous %}
+        	<li><a href="{% url 'user-logout' %}" class='modal-trigger'>Log Out</a></li>
+				{% else %}
+				<li><a href="#singup" class='modal-trigger'>Sing Up</a></li>
         <li><a href="#singin" class='modal-trigger'>Sing In</a></li>
+					{% endif%}
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="sass.html">Sass</a></li>

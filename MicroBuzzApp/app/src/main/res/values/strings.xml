@@ -7,4 +7,6 @@
     <string name="action_alert">Alerta</string>
     <string name="action_log_out">Cerrar Sesión</string>
     <string name="log_in">Inicio Sesión</string>
+    <string name="login_user">Usuario</string>
+    <string name="login_conductor">Conductor</string>
 </resources>

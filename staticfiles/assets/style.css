@@ -20,3 +20,12 @@
 .btn a{
 	z-index: 9999;
 }
+
+
+nav {
+    color: #fff;
+    background-color: #26a69a;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}

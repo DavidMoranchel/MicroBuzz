@@ -7,19 +7,15 @@
 	<title>MicroBuzz</title>
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100italic,900' rel='stylesheet' type='text/css'>
-  	<link rel="stylesheet" href="{% static 'materialize.min.css' %}">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+  	<link rel="stylesheet" href="{% static 'assets/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/style.css' %}">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">MicroBuzz</a>
+  <nav class="teal lighten-2">
+    <div class="nav-wrapper ">
+      <a href="#!" class="brand-logo ">MicroBuzz</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#singup" class='modal-trigger'>Sing Up</a></li>
-        <li><a href="#singin" class='modal-trigger'>Sing In</a></li>
-      </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="sass.html">Sass</a></li>
         <li><a href="badges.html">Components</a></li>
@@ -29,9 +25,17 @@
     </div>
   </nav>
 
+
 {% block content %}
 
-
+        <ul class="right hide-on-med-and-down">
+          {% if user and not user.is_anonymous %}
+          <li><a href="{% url 'user-logout' %}" class='modal-trigger'>Log Out</a></li>
+        {% else %}
+        <li><a href="#singup" class='modal-trigger'>Sing Up</a></li>
+        <li><a href="#singin" class='modal-trigger'>Sing In</a></li>
+          {% endif%}
+      </ul>
     {% endblock %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

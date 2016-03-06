@@ -40,6 +40,9 @@
       <div class="modal-content">
         <h4>Sing Up</h4>
         <p class='center-align'>
+          <form action="" method='POST'>
+            
+          </form>
           {% if user and not user.is_anonymous %}
           <h1>Welcome back {{ user.get_full_name }}. </h1>
            <a href="{% url 'user-logout' %}">Logout</a>
@@ -51,7 +54,7 @@
         </p>
       </div>
       <div class="modal-footer">
-        <a href="/templates/chofer.html" class=" modal-action modal-close waves-effect waves-green btn-flat">Entrar!</a>
+        <a href="templates/chofer.html" class=" modal-action modal-close waves-effect waves-green btn-flat">Entrar!</a>
       </div>
     </div>
 

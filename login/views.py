@@ -26,3 +26,8 @@ def base(request):
 
 
 	return render(request,'chofer.html', {'chofer':c, 'form':ChoferForm()})
+
+
+
+
+

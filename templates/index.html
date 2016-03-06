@@ -8,7 +8,7 @@
       <li>
         <img src="http://www.arpem.com/furgonetas/citroen/jumpy/imagenes-08/citroen-jumpy-combi-dimensiones-1.jpg"> <!-- random image -->
         <div class="caption center-align">
-          <h3>Evalue el Servicio</h3>
+          <h3>Evalúe el Servicio</h3>
           <h5 class="light grey-text text-lighten-3">Es fácil y rápido</h5>
         </div>
       </li>
@@ -56,11 +56,11 @@
         <h4>Sing In</h4>
         <p class='center-align'>
           {% if user and not user.is_anonymous %}
-          <h1>Welcome back {{ user.get_full_name }}. </h1>
+          <h1>Bienvenido {{ user.get_full_name }}. </h1>
            <a href="{% url 'user-logout' %}">Logout</a>
            {% else %}
            <a class='loginfb' href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
-           Enter with Facebook
+           Entra con Facebook
            </a>
           {% endif %}
         </p>

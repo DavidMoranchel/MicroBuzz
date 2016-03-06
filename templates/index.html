@@ -3,12 +3,15 @@
 
 {% block content %}
 {% if user and not user.is_anonymous %}
-
+<div class="container center-align" >
+<img id="buss"src="static/assets/microBuzz.gif" alt="">
+</div>
 <div class="center-align s6 m6 offset-s3 offset-m3">
 <a href="{% url 'chofer' %}"class="waves-effect waves-light btn"><i class="material-icons right">assignment_ind</i>Chofer</a>
 <a href="{% url 'usuario' %}"class="waves-effect waves-light btn"><i class="material-icons right">assignment_ind</i>Usuario</a>
 </div>
-{% endif %}
+
+{% else %}
 
 <div class="slider">
     <ul class="slides">
@@ -44,6 +47,8 @@
       </li>
     </ul>
   </div>
+
+  {% endif %}
 
     <div id="singup" class="modal">
       <div class="modal-content">
